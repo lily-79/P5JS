@@ -3,7 +3,7 @@ let particles = [];
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 300; i++) {
     particles[i] = new Particle();
   }
 }
