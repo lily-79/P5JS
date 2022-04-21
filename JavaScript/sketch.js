@@ -8,36 +8,24 @@ let sketch = function(p){
   p.setup = function(){
     canvas = p.createCanvas(1000,1000);
     canvas.id("canvas");
-
+    p.background(0);p.background(0);
     p.colorMode(p.RGB);
   }
 
   p.draw = function(){
-      p.background(0);
 //    p.clear();
   //  p.translate(-p.width/2, -p.height/2)
     if(detections != undefined){
       if(detections.multiHandLandmarks != undefined){
-  //insideLines
-          //pinkie lines
-            p.stroke(red,green,blue,opac);
-            p.strokeWeight(25);
-            p.drawLines([20,12]);
-            p.drawLines([20,8]);
-          //ring lines
-            p.drawLines([16,4]);
-            p.drawLines([16,8]);
-          //middle lines
-            p.drawLines([12,4]);
-          //Index lines are already made by other lines
+    p.stroke(red,green,blue,opac);
+    p.strokeWeight(15);
+    p.drawLines([0,1,2,3,4]);
+    p.drawLines([0,5,6,7,8]);
+    p.drawLines([0,17,18,19,20]);
+    p.drawLines([5,9,13,17]);
+    p.drawLines([9,10,11,12]);
+    p.drawLines([13,14,15,16]);
 
-//outside lines
-        p.strokeWeight(10);
-        p.drawLines([20,16]);//P>R
-        p.drawLines([16,12]);//R>M
-        p.drawLines([12,8]);//M>I
-        p.drawLines([8,4]);//I>T
-        p.drawLines([4,20]);//T>P
 
       }
     }
